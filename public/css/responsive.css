@@ -1,0 +1,512 @@
+@media (max-width: 1024px) {
+   .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .student-grid-modern {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+      }
+      
+      .item-large {
+        grid-column: span 2;
+  }
+
+   .fees-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .dates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-container {
+    gap: 3rem;
+  }
+  
+  .contact-info h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media(max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  h2 {
+    font-size: var(--text-3xl) !important;
+  }
+  h3 {
+    font-size: var(--text-2xl) !important;
+  }
+
+  h1 {
+    font-size: var(--text-4xl) !important;
+  }
+  /* Hide desktop elements */
+  .nav-links {
+    display: none;
+  }
+
+  .homepage-nav-cta {
+    display: none;
+  }
+
+  /* Show mobile elements */
+  .cta-nav {
+    display: flex;
+    gap: var(--text-sm);
+    align-items: center;
+  }
+
+  .homepage-menu {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .homepage-menu img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+  }
+
+  .nav-apply-btn {
+    padding: 0.75rem 1.2rem;
+    font-size: var(--text-sm);
+  }
+
+  /* Mobile Navbar */
+  .homepage-navbar {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 1rem var(--text-xs);
+    position: relative;
+    z-index: 100;
+  }
+
+  .homepage-logo {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+  }
+
+   .homepage-navbar-small {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--secondary-color);
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-md);
+    z-index: 9999;
+    height: 100vh;
+    width: 70%;
+    transition: right 0.3s ease-out;
+    overflow-y: auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .homepage-navbar-small.active {
+    right: 0;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+  }
+
+  .nav-links-small {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0;
+    margin-top: 4rem;
+  }
+
+  .nav-links-small li {
+    width: 100%;
+  }
+
+  .nav-links-small a {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    font-weight: var(--weight-medium);
+    display: block;
+    padding: 1rem;
+    transition: var(--transition-fast);
+    text-align: center;
+  }
+
+  .nav-links-small a:hover {
+    color: var(--accent-color);
+    background-color: rgba(255,255,255,0.1);
+  }
+
+  .homepage-navbar-small .homepage-nav-cta {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .homepage-navbar-small .btn,
+  .homepage-navbar-small .btn-secondary,
+  .homepage-navbar-small .btn-portal,
+  .homepage-navbar-small a.btn {
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: var(--text-4xl);
+    width: 100%;
+  }
+
+  .hero-desc {
+    padding-top: 2rem;
+  }
+
+  .hero-desc h1 {
+    font-size: var(--text-4xl);
+  }
+
+  .hero-desc p {
+    font-size: var(--text-base);
+  }
+
+  
+
+  .hero-img {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .item-tall {
+    grid-row: span 2;
+  }
+
+   .gallery-modern {
+        padding: 3rem 1.2rem;
+      }
+      
+      .gallery-header-modern h2 {
+        font-size: 2.2rem;
+      }
+      
+      .student-grid-modern {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        grid-auto-flow: row;
+      }
+      
+    
+      .gallery-item-modern,
+      .item-large,
+      .item-tall {
+        grid-column: span 1;
+        grid-row: auto;
+        aspect-ratio: 4 / 3;
+      }
+      
+      .item-tall {
+        aspect-ratio: 4 / 3;
+      }
+      
+      .gallery-caption-modern h3 {
+        font-size: var(--text-sm) !important;
+      }
+      
+      .caption-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .main-footer {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+  }
+  .footer-bottom {
+    margin-top: 3rem;
+  }
+
+
+  /* About Section */
+ .about-hero-content h1 {
+    font-size: var(--text-4xl) !important;
+  }
+  
+  .journey-container {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .milestones {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-vision-container,
+  .values-grid,
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+   .curriculum-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .tabs-header {
+    flex-direction: column;
+  }
+  
+  .academics-hero-content h2 {
+    font-size: var(--text-3xl) !important;
+  }
+  
+  .levels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .process-steps::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .step-number {
+    margin-bottom: 1rem;
+  }
+  
+  
+  .fees-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .dates-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .facility-item {
+    flex-direction: column;
+  }
+  
+  .facility-image {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .facility-info {
+    padding: 1.2rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .voice-card p {
+    font-size: 1.6rem;
+  }
+  
+  .campus-hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+   .contact-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+  }
+  
+  .contact-info {
+    padding-right: 0;
+  }
+  
+  .map-section {
+    height: 300px;
+  }
+  
+  .contact-faq {
+    padding: 4rem 1.5rem;
+  }
+  
+  .faq-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-form-wrapper {
+    padding: 1.8rem;
+  }
+
+  .portal-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .portal-tabs {
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 0.3rem;
+  }
+  
+  .tab-btn {
+    padding: 0.8rem;
+  }
+  
+  .portal-card {
+    padding: 1.8rem;
+  }
+  
+  .portal-card-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .portal-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* Small phones */
+@media(max-width: 480px) {
+  .hero-desc h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+   .gallery-header-modern h2 {
+        font-size: 1.8rem;
+      }
+      
+      .gallery-header-modern p {
+        font-size: 0.95rem;
+   }
+
+    .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info h2 {
+    font-size: 2.2rem;
+  }
+  
+  .info-item {
+    gap: 1rem;
+  }
+  
+  .info-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+  }
+  
+  .faq-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-faq .faq-item summary {
+    font-size: 1.3rem;
+    padding: 1rem 1.2rem;
+  }
+}

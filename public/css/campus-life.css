@@ -1,0 +1,272 @@
+/* Campus Hero */
+.campus-hero {
+  background: linear-gradient(rgba(11, 21, 35, 0.8), rgba(11, 21, 35, 0.8)), url('https://images.unsplash.com/photo-1562774053-701939374585?w=1600&auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.campus-hero-content h2 {
+  color: var(--text-light);
+  font-size: var(--text-4xl);
+  margin-bottom: 1rem;
+}
+
+/* Facilities Section */
+.facilities-section {
+  padding: 6rem 2rem;
+  background: var(--background-color);
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.facility-item {
+  display: flex;
+  gap: 1.5rem;
+  background: var(--surface-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition-fast);
+}
+
+.facility-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.facility-image {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.facility-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.facility-info {
+  padding: 1.2rem 1.2rem 1.2rem 0;
+}
+
+.facility-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.facility-info p {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+}
+
+/* Clubs Section */
+.clubs-section {
+  padding: 6rem 2rem;
+  background: var(--surface-color);
+}
+
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.club-card {
+  background: var(--background-color);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: var(--transition-fast);
+}
+
+.club-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.club-icon {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.club-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.club-card p {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+}
+
+/* Sports Section */
+.sports-section {
+  padding: 6rem 2rem;
+  background: var(--background-color);
+}
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sport-card {
+  background: var(--surface-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition-fast);
+}
+
+.sport-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.sport-image {
+  height: 200px;
+}
+
+.sport-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sport-card h3 {
+  font-size: 1.8rem;
+  padding: 1rem 1rem 0.5rem;
+}
+
+.sport-card p {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  padding: 0 1rem 1rem;
+}
+
+/* Events Section */
+.events-section {
+  padding: 6rem 2rem;
+  background: var(--surface-color);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.event-card {
+  display: flex;
+  gap: 1rem;
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.event-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.event-month {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: var(--weight-bold);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  min-width: 60px;
+  text-align: center;
+}
+
+.event-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.event-info p {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+}
+
+/* Gallery Section */
+.campus-gallery {
+  padding: 6rem 2rem;
+  background: var(--background-color);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  height: 250px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-fast);
+}
+
+.gallery-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Student Voice */
+.student-voice {
+  padding: 6rem 2rem;
+  background: var(--primary-color);
+}
+
+.voice-card {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.quote-icon {
+  font-size: 6rem;
+  color: var(--accent-color);
+  font-family: serif;
+  line-height: 1;
+}
+
+.voice-card p {
+  color: var(--text-light);
+  font-size: 2rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.student-name {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  font-weight: var(--weight-semibold);
+}
+
+

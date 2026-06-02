@@ -1,0 +1,209 @@
+<%- include("../partials/navbar.ejs", {
+  page_header: "About Section",
+  page_text: "Small lorem ispum",
+  
+}) %>
+
+<%- include("../partials/header.ejs", {
+  page_header: "About KingsField Academy",
+  page_text: "Learn more about our mission, vision, and commitment to excellence in education.",
+  showButtons: true
+}) %>
+
+
+<section class="about-hero-section">
+  <div class="about-hero-content">
+    <span class="about-badge">Our Story</span>
+    <h1>Shaping Tomorrow's <span class="highlight">Leaders Today</span></h1>
+    <p>For over a decade, KingsField Academy has been the beacon of educational excellence in Benin City, nurturing young minds to become global citizens with strong values and academic prowess.</p>
+  </div>
+</section>
+
+<section class="mission-vision-section">
+  <div class="mission-vision-container">
+    <div class="mv-card mission-card">
+      <div class="mv-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3>Our Mission</h3>
+      <p>To provide a transformative educational experience that empowers students with knowledge, critical thinking skills, and strong character to excel in a rapidly changing world.</p>
+    </div>
+    
+    <div class="mv-card vision-card">
+      <div class="mv-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <h3>Our Vision</h3>
+      <p>To become Nigeria's leading institution for holistic education, recognized globally for producing innovative thinkers, compassionate leaders, and responsible citizens.</p>
+    </div>
+
+    <div class="mv-card values-card">
+      <div class="mv-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L15 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L9 8.5L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3>Core Values</h3>
+      <p>Excellence • Integrity • Innovation • Respect • Resilience • Service</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats-showcase">
+  <div class="stats-container">
+    <div class="stat-item">
+      <div class="stat-number" data-target="12">0</div>
+      <div class="stat-label">Years of Excellence</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="1500">0<span class="stat-suffix">+</div>
+      <div class="stat-label">Students Enrolled</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="50">0</div>
+      <div class="stat-label">Expert Faculty</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="100">0</div>
+      <div class="stat-label">University Placement</div>
+    </div>
+  </div>
+</section>
+
+<section class="journey-section">
+  <div class="journey-container">
+    <div class="journey-text">
+      <span class="section-tag">Our Journey</span>
+      <h2>From Humble Beginnings to <span class="highlight">Educational Excellence</span></h2>
+      <p>Founded in 2012, KingsField Academy started with just 45 students and a vision to revolutionize education in Edo State. Today, we stand proud as one of Benin City's most respected educational institutions.</p>
+      <p>Our commitment to blending traditional values with modern teaching methodologies has created a unique learning environment where every child discovers their potential and develops the confidence to pursue their dreams.</p>
+      
+      <div class="milestones">
+        <div class="milestone">
+          <div class="milestone-year">2012</div>
+          <div class="milestone-text">Founded with 45 students</div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-year">2015</div>
+          <div class="milestone-text">First WAEC cohort - 100% pass rate</div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-year">2018</div>
+          <div class="milestone-text">Opened state-of-the-art science lab</div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-year">2024</div>
+          <div class="milestone-text">Recognized as top private school in Benin</div>
+        </div>
+      </div>
+    </div>
+    <div class="journey-image">
+      <img src="/Images/logo.jpg" alt="KingsField Academy Campus" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="values-container">
+    <div class="values-header">
+      <span class="section-tag">What We Believe</span>
+      <h2>Our Core Principles</h2>
+      <p>These foundational beliefs guide everything we do at KingsField Academy</p>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Academic Excellence</h3>
+        <p>Rigorous curriculum combined with innovative teaching methods to ensure every student achieves their academic best.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 16V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="8" r="0.5" fill="currentColor" stroke="currentColor"/>
+          </svg>
+        </div>
+        <h3>Character Development</h3>
+        <p>Building strong moral values, integrity, and leadership skills that last a lifetime.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Parent Partnership</h3>
+        <p>Collaborative approach between school and home for holistic student development.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Global Perspective</h3>
+        <p>Preparing students for success in an interconnected world through diverse learning experiences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="leadership-section">
+  <div class="leadership-container">
+    <div class="leadership-header">
+      <span class="section-tag">Meet Our Leaders</span>
+      <h2>Dedicated to Your Child's Success</h2>
+      <p>Experienced educators committed to excellence in every classroom</p>
+    </div>
+    
+    <div class="leadership-grid">
+      <div class="leader-card">
+        <div class="leader-image">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=60" alt="Principal" loading="lazy">
+        </div>
+        <h3>Dr. Michael Okonjo</h3>
+        <span class="leader-title">Principal / CEO</span>
+        <p>PhD in Educational Leadership with over 20 years of experience transforming schools across Nigeria.</p>
+      </div>
+      
+      <div class="leader-card">
+        <div class="leader-image">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=60" alt="Vice Principal" loading="lazy">
+        </div>
+        <h3>Mrs. Adeola Williams</h3>
+        <span class="leader-title">Vice Principal Academics</span>
+        <p>Curriculum specialist passionate about innovative teaching methodologies and student success.</p>
+      </div>
+      
+      <div class="leader-card">
+        <div class="leader-image">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=60" alt="Administrator" loading="lazy">
+        </div>
+        <h3>Mr. Samuel Eze</h3>
+        <span class="leader-title">Director of Administration</span>
+        <p>Ensuring smooth operations and creating a safe, conducive learning environment for all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("../partials/footer.ejs") %>

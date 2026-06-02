@@ -1,0 +1,20 @@
+🟢 Should be CMS-editable (Content that changes often):
+Hero section text (headlines, descriptions)
+
+About Us content (mission, vision, story)
+
+Testimonials (add/edit/remove parent reviews)
+
+FAQ section (questions and answers)
+
+Gallery images (upload new photos)
+
+Announcements/Banners (news, events)
+
+Team members (staff profiles)
+
+Contact information (phone, email, address)
+
+Social media links
+
+Footer text/copyright

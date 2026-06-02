@@ -1,0 +1,333 @@
+/* Portal Page Styles */
+.portal-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.portal-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.portal-hero-content .highlight {
+  color: var(--accent-color);
+}
+
+.portal-hero-content p {
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+.portal-section {
+  padding: 5rem 2rem;
+  background: var(--background-color);
+}
+
+.portal-container {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Portal Tabs */
+.portal-tabs {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--surface-color);
+  padding: 0.5rem;
+  border-radius: 60px;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--text-secondary);
+}
+
+.tab-btn svg {
+  stroke: var(--text-secondary);
+}
+
+.tab-btn.active {
+  background: var(--primary-color);
+  color: var(--text-light);
+}
+
+.tab-btn.active svg {
+  stroke: var(--text-light);
+}
+
+/* Portal Card */
+.portal-card {
+  background: var(--surface-color);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.portal-card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.portal-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.portal-icon svg {
+  stroke: var(--accent-color);
+}
+
+.portal-card-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.portal-card-header p {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+}
+
+/* Portal Form */
+.portal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: var(--background-color);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 4rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-password svg {
+  stroke: var(--text-secondary);
+}
+
+/* Form Options */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.forgot-link {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Portal Button */
+.portal-btn {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.portal-btn svg {
+  stroke: var(--text-light);
+}
+
+.portal-btn:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.portal-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.portal-footer p {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+}
+
+.portal-footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.portal-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Portal Features */
+.portal-features {
+  padding: 5rem 2rem;
+  background: var(--surface-color);
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.features-grid-portal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  background: var(--background-color);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.feature-icon svg {
+  stroke: var(--accent-color);
+}
+
+.feature-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+}
+
+/* Tab Content Display */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

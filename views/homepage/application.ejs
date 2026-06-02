@@ -1,0 +1,239 @@
+<%- include("../partials/navbar.ejs") %>
+
+<section class="apply-section">
+  <div class="apply-container">
+    
+    <!-- Left Column - Application Info -->
+    <div class="apply-info">
+      <span class="apply-badge">📝 Begin Your Journey</span>
+      <h1>Apply to <span class="highlight">KingsField Academy</span></h1>
+      <p>Take the first step toward an exceptional education. Complete the application form and our admissions team will contact you within 48 hours.</p>
+      
+      <div class="info-boxes">
+        <div class="info-box">
+          <div class="info-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Visit Us</h4>
+            <p>Benin City, Edo State, Nigeria</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 16.92V19.92C22.0011 20.2785 21.9241 20.6331 21.7744 20.9576C21.6247 21.282 21.406 21.5677 21.1335 21.7938C20.861 22.0199 20.5412 22.1808 20.1973 22.265C19.8535 22.3492 19.4944 22.3547 19.148 22.281C16.4788 21.7186 13.9678 20.594 11.8 19C9.65454 17.4634 7.91259 15.4551 6.72 13.12C5.39107 10.7419 4.66052 8.06949 4.60001 5.34C4.57488 4.98872 4.62395 4.63537 4.74388 4.30327C4.86381 3.97117 5.05196 3.66762 5.295 3.41202C5.53805 3.15643 5.83084 2.95468 6.15494 2.81989C6.47904 2.68509 6.82694 2.62021 7.17701 2.62999H10.18C10.6102 2.62431 11.0248 2.78734 11.339 3.08295C11.6533 3.37857 11.841 3.78345 11.86 4.213C11.9227 5.34166 12.1552 6.4534 12.55 7.50999C12.6851 7.84573 12.7066 8.21681 12.6116 8.56596C12.5167 8.91512 12.3105 9.22181 12.025 9.43799L10.465 10.634C11.5911 12.7965 13.1966 14.6531 15.155 16.06L16.377 14.602C16.637 14.2972 16.9995 14.1004 17.3937 14.0492C17.7879 13.998 18.1848 14.0958 18.511 14.322C19.5749 14.7091 20.6898 14.9381 21.82 15.001C22.2489 15.0217 22.6525 15.2104 22.9465 15.5249C23.2405 15.8394 23.4018 16.2533 23.395 16.682V16.92Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Call Us</h4>
+            <p>+234 (810) 234 5678</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Email Us</h4>
+            <p>admissions@kingsfield.edu.ng</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="application-requirements">
+        <h4>📋 Application Requirements</h4>
+        <ul>
+          <li>Birth certificate (scanned copy)</li>
+          <li>Previous school report cards (last 2 years)</li>
+          <li>Passport photograph of student</li>
+          <li>Parent/Guardian valid ID</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Right Column - Application Form -->
+    <div class="apply-form-wrapper">
+      <div class="form-header">
+        <h2>Student Application Form</h2>
+        <p>Please fill in all required fields accurately</p>
+      </div>
+      
+      <form class="apply-form" id="applicationForm" method="POST" action="/api/apply" enctype="multipart/form-data">
+        
+        <!-- Student Information Section -->
+        <div class="form-section">
+          <h3>Student Information</h3>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Student's Full Name *</label>
+              <%- include('../partials/forms.ejs', { type: 'text', name: 'studentName', placeholder: 'e.g., Olamide Adebayo', required: true }) %>
+            </div>
+            <div class="form-group">
+              <label>Date of Birth *</label>
+              <%- include('../partials/forms.ejs', { type: 'date', name: 'dob', placeholder: '', required: true }) %>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Gender *</label>
+              <select name="gender" class="input-form" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Applying for Class/Grade *</label>
+              <select name="class" class="input-form" required>
+                <option value="">Select Class</option>
+                <option value="creche">Crèche (1-2 years)</option>
+                <option value="nursery1">Nursery 1</option>
+                <option value="nursery2">Nursery 2</option>
+                <option value="primary1">Primary 1</option>
+                <option value="primary2">Primary 2</option>
+                <option value="primary3">Primary 3</option>
+                <option value="primary4">Primary 4</option>
+                <option value="primary5">Primary 5</option>
+                <option value="jss1">JSS 1</option>
+                <option value="jss2">JSS 2</option>
+                <option value="jss3">JSS 3</option>
+                <option value="ss1">SSS 1</option>
+                <option value="ss2">SSS 2</option>
+                <option value="ss3">SSS 3</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Previous School (if any)</label>
+            <%- include('../partials/forms.ejs', { type: 'text', name: 'previousSchool', placeholder: 'e.g., Sunshine International School', required: false }) %>
+          </div>
+        </div>
+        
+        <!-- Parent/Guardian Information Section -->
+        <div class="form-section">
+          <h3>Parent/Guardian Information</h3>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Father's Full Name</label>
+              <%- include('../partials/forms.ejs', { type: 'text', name: 'fatherName', placeholder: 'e.g., Mr. Adebayo Olamide', required: false }) %>
+            </div>
+            <div class="form-group">
+              <label>Father's Phone Number</label>
+              <%- include('../partials/forms.ejs', { type: 'tel', name: 'fatherPhone', placeholder: '08012345678', required: false }) %>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Mother's Full Name</label>
+              <%- include('../partials/forms.ejs', { type: 'text', name: 'motherName', placeholder: 'e.g., Mrs. Adebayo Funke', required: false }) %>
+            </div>
+            <div class="form-group">
+              <label>Mother's Phone Number</label>
+              <%- include('../partials/forms.ejs', { type: 'tel', name: 'motherPhone', placeholder: '08012345678', required: false }) %>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Email Address (Primary contact) *</label>
+            <%- include('../partials/forms.ejs', { type: 'email', name: 'email', placeholder: 'parent@example.com', required: true }) %>
+          </div>
+          
+          <div class="form-group">
+            <label>Residential Address *</label>
+            <textarea name="address" rows="3" class="input-form" placeholder="e.g., 12 Unity Road, GRA, Benin City" required></textarea>
+          </div>
+        </div>
+        
+        <!-- Additional Information -->
+        <div class="form-section">
+          <h3>Additional Information</h3>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>How did you hear about us?</label>
+              <select name="source" class="input-form">
+                <option value="">Select</option>
+                <option value="social">Social Media</option>
+                <option value="friend">Friend/Family</option>
+                <option value="radio">Radio</option>
+                <option value="billboard">Billboard</option>
+                <option value="website">Website Search</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Admission Session</label>
+              <select name="session" class="input-form">
+                <option value="2025-2026">2025-2026</option>
+                <option value="2026-2027" selected>2026-2027</option>
+                <option value="2027-2028">2027-2028</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Additional Comments / Special Needs</label>
+            <textarea name="comments" rows="2" class="input-form" placeholder="Any medical conditions, allergies, or special needs we should know about?"></textarea>
+          </div>
+        </div>
+        
+        <!-- Document Upload Section -->
+        <div class="form-section">
+          <h3>Upload Documents</h3>
+          <p class="upload-hint">Supported formats: PDF, JPG, PNG (Max 5MB each)</p>
+          
+          <div class="form-group">
+            <label>Birth Certificate *</label>
+            <input type="file" name="birthCertificate" class="input-form" accept=".pdf,.jpg,.png" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Last Report Card (if applicable)</label>
+            <input type="file" name="reportCard" class="input-form" accept=".pdf,.jpg,.png">
+          </div>
+          
+          <div class="form-group">
+            <label>Student's Passport Photograph *</label>
+            <input type="file" name="passport" class="input-form" accept=".jpg,.png" required>
+          </div>
+        </div>
+        
+        <!-- Terms and Submit -->
+        <div class="form-terms">
+          <label class="checkbox-label">
+            <input type="checkbox" required> I confirm that all information provided is accurate and complete.
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" required> I agree to the <a href="/terms">Terms and Conditions</a> of KingsField Academy.
+          </label>
+        </div>
+        
+        <button type="submit" class="apply-btn">
+          Submit Application
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        
+        <div class="form-note">
+          <p>⚠️ Application fee of ₦3,000 is required after submission. You will receive payment instructions via WhatsApp/SMS.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include("../partials/footer.ejs") %>
+

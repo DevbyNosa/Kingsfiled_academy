@@ -1,0 +1,175 @@
+<%- include("../partials/navbar.ejs") %>
+
+<%- include("../partials/header.ejs", {
+  page_header: "Get in Touch",
+  page_text: "We'd love to hear from you. Reach out with questions, schedule a visit, or start your journey with KingsField Academy.",
+  customButtons: `<a href="/contact#contact-form" class="btn btn-primary">Message Us</a> `
+}) %>
+
+<!-- Modern Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
+   
+    <div class="contact-info">
+      <span class="info-badge">Contact Us</span>
+      <h2>Let's Start a <span class="highlight">Conversation</span></h2>
+      <p>Whether you have questions about admissions, want to schedule a campus tour, or need more information about our programs — we're here to help.</p>
+      
+      <div class="info-list">
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 16.92V19.92C22.0011 20.2785 21.9241 20.6331 21.7744 20.9576C21.6247 21.282 21.406 21.5677 21.1335 21.7938C20.861 22.0199 20.5412 22.1808 20.1973 22.265C19.8535 22.3492 19.4944 22.3547 19.148 22.281C16.4788 21.7186 13.9678 20.594 11.8 19C9.65454 17.4634 7.91259 15.4551 6.72 13.12C5.39107 10.7419 4.66052 8.06949 4.60001 5.34C4.57488 4.98872 4.62395 4.63537 4.74388 4.30327C4.86381 3.97117 5.05196 3.66762 5.295 3.41202C5.53805 3.15643 5.83084 2.95468 6.15494 2.81989C6.47904 2.68509 6.82694 2.62021 7.17701 2.62999H10.18C10.6102 2.62431 11.0248 2.78734 11.339 3.08295C11.6533 3.37857 11.841 3.78345 11.86 4.213C11.9227 5.34166 12.1552 6.4534 12.55 7.50999C12.6851 7.84573 12.7066 8.21681 12.6116 8.56596C12.5167 8.91512 12.3105 9.22181 12.025 9.43799L10.465 10.634C11.5911 12.7965 13.1966 14.6531 15.155 16.06L16.377 14.602C16.637 14.2972 16.9995 14.1004 17.3937 14.0492C17.7879 13.998 18.1848 14.0958 18.511 14.322C19.5749 14.7091 20.6898 14.9381 21.82 15.001C22.2489 15.0217 22.6525 15.2104 22.9465 15.5249C23.2405 15.8394 23.4018 16.2533 23.395 16.682V16.92Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Call Us</h3>
+            <p>+234 (810) 234 5678</p>
+            <p>+234 (802) 345 6789</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Email Us</h3>
+            <p>kingsfieldacademy@gmail.com</p>
+            <p>admissions@kingsfield.edu.ng</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Visit Us</h3>
+            <p>Benin City, Edo State</p>
+            <p>Nigeria</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="office-hours">
+        <h4>Office Hours</h4>
+        <div class="hours-row">
+          <span>Monday - Friday</span>
+          <span>8:00 AM - 4:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span>Saturday</span>
+          <span>9:00 AM - 12:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span>Sunday</span>
+          <span>Closed</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Column - Contact Form -->
+    <div class="contact-form-wrapper" id="contact-form">
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <select id="subject" name="subject" required>
+            <option value="">Select Subject</option>
+            <option value="admissions">Admissions Inquiry</option>
+            <option value="tour">Schedule a Tour</option>
+            <option value="information">General Information</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <textarea id="message" name="message" rows="5" placeholder="Your Message..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">
+          Send Message
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63454.88014772733!2d5.56220475!3d6.33501205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d3b3f5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sBenin%20City!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" 
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!-- FAQ Contact Section -->
+<section class="contact-faq">
+  <div class="faq-container">
+    <div class="faq-header">
+      <span class="faq-badge">Quick Answers</span>
+      <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+    </div>
+    
+    <div class="faq-grid">
+      <details class="faq-item">
+        <summary>Can I schedule a campus tour?</summary>
+        <div class="faq-answer">
+          <p>Absolutely! Campus tours are available Monday through Friday from 9 AM to 3 PM. Please call our admissions office or fill out the contact form to schedule your visit.</p>
+        </div>
+      </details>
+      
+      <details class="faq-item">
+        <summary>How long does the admission process take?</summary>
+        <div class="faq-answer">
+          <p>The complete admission process typically takes 2-3 weeks from application submission to acceptance letter, depending on assessment scheduling and document verification.</p>
+        </div>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Do you offer scholarships?</summary>
+        <div class="faq-answer">
+          <p>Yes! We offer merit-based scholarships for exceptional students. Contact our admissions office for more details on scholarship opportunities and requirements.</p>
+        </div>
+      </details>
+      
+      <details class="faq-item">
+        <summary>Is transportation available?</summary>
+        <div class="faq-answer">
+          <p>Yes, we operate school buses on major routes within Benin City. Availability and fees can be discussed during the registration process.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<%- include("../partials/footer.ejs") %>
+

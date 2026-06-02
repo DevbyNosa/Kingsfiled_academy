@@ -1,0 +1,464 @@
+/* Admissions Page Styles */
+.admissions-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.admissions-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--accent-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: var(--text-sm);
+  margin-bottom: 1.5rem;
+}
+
+.admissions-hero h1 {
+  font-size: var(--text-5xl);
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: var(--accent-color);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+}
+
+.btn-outline:hover {
+  background: var(--text-light);
+  color: var(--primary-color);
+}
+
+/* Why Choose Section */
+.why-choose {
+  padding: 6rem 2rem;
+  background: var(--surface-color);
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reason-card {
+  background: var(--background-color);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.reason-icon {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Process Steps - Timeline Style */
+.process-section {
+  padding: 6rem 2rem;
+  background: var(--background-color);
+  position: relative;
+}
+
+.process-steps {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Vertical line down the middle */
+.process-steps::before {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-color), rgba(212, 175, 55, 0.2));
+}
+
+.step {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 1.5rem;
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-fast);
+  margin-left: 0;
+}
+
+
+.step-number {
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  font-weight: var(--weight-bold);
+  color: var(--accent-color);
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  border: 2px solid var(--accent-color);
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+.step-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: var(--text-xl);
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.step-link {
+  color: var(--accent-color);
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: var(--weight-medium);
+  transition: var(--transition-fast);
+}
+
+.step-link:hover {
+  transform: translateX(5px);
+}
+
+
+
+/* Requirements Section */
+.requirements-section {
+  padding: 6rem 2rem;
+  background: var(--surface-color);
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.requirements-list {
+  list-style: none;
+  padding: 0;
+}
+
+.requirements-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  color: var(--text-secondary);
+}
+
+.requirements-list svg {
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.note-box {
+  background: rgba(212, 175, 55, 0.1);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.note-box svg {
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+/* Fees Section - Clean Professional */
+.fees-section {
+  padding: 5rem 2rem;
+  background: var(--background-color);
+}
+
+.fees-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fee-card {
+  background: var(--surface-color);
+  padding: 1.8rem 1.5rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: var(--transition-fast);
+  border: 1px solid #eaeaea;
+}
+
+.fee-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.fee-card h3 {
+  font-size: 1.8rem;
+  font-weight: var(--weight-semibold);
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.fee-amount {
+  font-size: 2.8rem;
+  font-weight: var(--weight-bold);
+  color: var(--accent-color);
+  margin: 0.8rem 0;
+}
+
+.fee-card p {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.fees-note {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 1.2rem;
+  background: var(--surface-color);
+  border-radius: var(--radius-sm);
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  text-align: center;
+  border: 1px solid #eaeaea;
+}
+
+.fees-note p {
+  margin: 0.3rem 0;
+}
+
+/* Dates Section */
+.dates-section {
+  padding: 5rem 2rem;
+  background: var(--surface-color);
+}
+
+.dates-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dates-content h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+
+.dates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.date-item {
+  background: var(--background-color);
+  padding: 1.2rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.date-item:hover {
+  transform: translateX(3px);
+  box-shadow: var(--shadow-md);
+}
+
+.date {
+  font-weight: var(--weight-bold);
+  color: var(--accent-color);
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.event {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: var(--weight-medium);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 5rem 2rem;
+  background: var(--primary-color);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  color: var(--text-light);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn-outline-light {
+  background: transparent;
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border-radius: var(--radius-sm);
+  font-weight: var(--weight-medium);
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-outline-light:hover {
+  background: var(--text-light);
+  color: var(--primary-color);
+}
+
+
+
+
+
+/* Dates Section */
+.dates-section {
+  padding: 6rem 2rem;
+  background: var(--surface-color);
+}
+
+.dates-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dates-content h2 {
+  margin-bottom: 2rem;
+}
+
+.dates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.date-item {
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  text-align: left;
+  border-left: 3px solid var(--accent-color);
+}
+
+.date {
+  font-weight: var(--weight-bold);
+  color: var(--accent-color);
+  margin-bottom: 0.25rem;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.cta-content h2 {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.btn-outline-light {
+  background: transparent;
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+}
+
+.btn-outline-light:hover {
+  background: var(--text-light);
+  color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admissions-hero h1 {
+    font-size: var(--text-3xl);
+  }
+  
+  .requirements-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .fee-card.featured {
+    transform: scale(1);
+  }
+}
