@@ -1,0 +1,231 @@
+<%- include("../partials/navbar.ejs") %>
+
+<section class="payment-status-section">
+  <div class="payment-status-container">
+    <div class="payment-status-card success">
+      <div class="status-icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      
+      <h1>Payment Successful!</h1>
+      <p>Your application has been submitted successfully.</p>
+      
+      <div class="payment-details">
+        <div class="detail-row">
+          <span>Reference Number:</span>
+          <strong><%= reference %></strong>
+        </div>
+        <div class="detail-row">
+          <span>Amount Paid:</span>
+          <strong class="amount">₦<%= amount %></strong>
+        </div>
+        <div class="detail-row">
+          <span>Payment Date:</span>
+          <strong><%= new Date().toLocaleDateString('en-NG') %></strong>
+        </div>
+      </div>
+      
+      <div class="next-steps">
+        <h3>What's Next?</h3>
+        <ul>
+          <li>✓ Our admissions team will review your application</li>
+          <li>✓ You'll receive a WhatsApp notification within 48 hours</li>
+          <li>✓ Check your email for updates</li>
+        </ul>
+      </div>
+      
+      <div class="button-group">
+        <a href="/" class="btn-home">Return to Homepage</a>
+        <a href="/admission" class="btn-admission">Admission Info</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("../partials/footer.ejs") %>
+
+<style>
+.payment-status-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #eef2f6 100%);
+}
+
+.payment-status-container {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.payment-status-card {
+  background: white;
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-status-card.success {
+  border-top: 5px solid #2ECC71;
+}
+
+.payment-status-card.failed {
+  border-top: 5px solid #E74C3C;
+}
+
+.status-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.payment-status-card.success .status-icon {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ECC71;
+}
+
+.payment-status-card.failed .status-icon {
+  background: rgba(231, 76, 60, 0.1);
+  color: #E74C3C;
+}
+
+.payment-status-card h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0B1523;
+}
+
+.payment-status-card > p {
+  color: #5a6874;
+  margin-bottom: 2rem;
+}
+
+.payment-details {
+  background: #F8F9FA;
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span:first-child {
+  color: #5a6874;
+  font-size: 1.3rem;
+}
+
+.detail-row strong {
+  color: #0B1523;
+  font-size: 1.3rem;
+}
+
+.detail-row .amount {
+  color: #2ECC71;
+  font-size: 1.6rem;
+}
+
+.next-steps {
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.next-steps h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #0B1523;
+}
+
+.next-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.next-steps li {
+  padding: 0.4rem 0;
+  color: #5a6874;
+  font-size: 1.3rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-home, .btn-admission, .btn-retry, .btn-contact {
+  display: inline-block;
+  padding: 1rem 1.8rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-home {
+  background: #0B1523;
+  color: white;
+}
+
+.btn-home:hover {
+  background: #D4AF37;
+  color: #0B1523;
+}
+
+.btn-admission, .btn-contact {
+  background: transparent;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+}
+
+.btn-admission:hover, .btn-contact:hover {
+  background: #D4AF37;
+  color: #0B1523;
+}
+
+.btn-retry {
+  background: #D4AF37;
+  color: #0B1523;
+}
+
+.btn-retry:hover {
+  background: #B89321;
+}
+
+@media (max-width: 600px) {
+  .payment-status-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .payment-status-card h1 {
+    font-size: 1.6rem;
+  }
+}
+</style>

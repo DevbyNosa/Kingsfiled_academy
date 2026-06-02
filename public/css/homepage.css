@@ -160,6 +160,56 @@ h5 {
   box-shadow: var(--shadow-sm);
 }
 
+/* Portal Style */
+.success-message {
+  background: #2ECC71;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease;
+}
+
+.success-message::before {
+  content: "✓";
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.error-message {
+  background: #E74C3C;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease;
+}
+
+.error-message::before {
+  content: "✗";
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 
 .homepage-container {

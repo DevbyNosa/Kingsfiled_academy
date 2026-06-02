@@ -1,0 +1,15 @@
+ <% if(success === true) { %>
+        <div class="success-message">
+          <span>
+            <%= messageType %>
+            </span>
+        </div>
+          <% } else {%>
+            <div>
+        <div class="error-message">
+          <span>
+            <%= messageType %>
+            </span>
+          </div>
+            </div>
+            <% } %>

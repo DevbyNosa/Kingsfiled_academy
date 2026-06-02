@@ -3,7 +3,9 @@ import env from 'dotenv/config';
 import session from './database/config/session.js';
 import ejs from 'ejs';
 import homepageRouter from './routes/homepage.js';
+import studentRouter from './routes/student.js';
 import pool from './database/config/db.js';
+import transporter from './database/config/nodemailer.js';
 
 
 
@@ -28,6 +30,7 @@ app.set('view engine', 'ejs');
 // For session management, we need to use the session middleware before defining any routes that require session handling.
 app.use(session);
 app.use('/', homepageRouter);
+app.use("/", studentRouter)
 
 
 app.listen(PORT, () => {

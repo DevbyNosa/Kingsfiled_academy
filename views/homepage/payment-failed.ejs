@@ -1,0 +1,255 @@
+<%- include("../partials/navbar.ejs") %>
+
+<section class="payment-status-section">
+  <div class="payment-status-container">
+    <div class="payment-status-card failed">
+      <div class="status-icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M15 9L9 15M9 9L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      
+      <h1>Payment Failed</h1>
+      <p>Your payment was not successful. Please try again.</p>
+      
+      <% if (reference) { %>
+      <div class="payment-details">
+        <div class="detail-row">
+          <span>Reference Number:</span>
+          <strong><%= reference %></strong>
+        </div>
+      </div>
+      <% } %>
+      
+      <% if (error) { %>
+      <div class="error-message">
+        <p><strong>Error:</strong> <%= error %></p>
+      </div>
+      <% } %>
+      
+      <div class="reasons">
+        <h3>Common reasons for payment failure:</h3>
+        <ul>
+          <li>⚠️ Insufficient funds in your account</li>
+          <li>⚠️ Incorrect card details entered</li>
+          <li>⚠️ Card expired or blocked</li>
+          <li>⚠️ Network timeout or internet interruption</li>
+        </ul>
+      </div>
+      
+      <div class="button-group">
+        <a href="/apply" class="btn-retry">Try Again</a>
+        <a href="/contact" class="btn-contact">Contact Support</a>
+      </div>
+      
+      <div class="help-note">
+        <p>Still having issues? Call us at <strong>+234 (810) 234 5678</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("../partials/footer.ejs") %>
+
+<style>
+.payment-status-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #eef2f6 100%);
+}
+
+.payment-status-container {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.payment-status-card {
+  background: white;
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-status-card.success {
+  border-top: 5px solid #2ECC71;
+}
+
+.payment-status-card.failed {
+  border-top: 5px solid #E74C3C;
+}
+
+.status-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.payment-status-card.success .status-icon {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ECC71;
+}
+
+.payment-status-card.failed .status-icon {
+  background: rgba(231, 76, 60, 0.1);
+  color: #E74C3C;
+}
+
+.payment-status-card h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0B1523;
+}
+
+.payment-status-card > p {
+  color: #5a6874;
+  margin-bottom: 2rem;
+}
+
+.payment-details {
+  background: #F8F9FA;
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span:first-child {
+  color: #5a6874;
+  font-size: 1.3rem;
+}
+
+.detail-row strong {
+  color: #0B1523;
+  font-size: 1.3rem;
+}
+
+.error-message {
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-message p {
+  color: #E74C3C;
+  font-size: 1.3rem;
+}
+
+.reasons {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.reasons h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #0B1523;
+}
+
+.reasons ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reasons li {
+  padding: 0.4rem 0;
+  color: #5a6874;
+  font-size: 1.3rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-home, .btn-admission, .btn-retry, .btn-contact {
+  display: inline-block;
+  padding: 1rem 1.8rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-home {
+  background: #0B1523;
+  color: white;
+}
+
+.btn-home:hover {
+  background: #D4AF37;
+  color: #0B1523;
+}
+
+.btn-retry {
+  background: #D4AF37;
+  color: #0B1523;
+}
+
+.btn-retry:hover {
+  background: #B89321;
+}
+
+.btn-contact {
+  background: transparent;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+}
+
+.btn-contact:hover {
+  background: #D4AF37;
+  color: #0B1523;
+}
+
+.help-note {
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.help-note p {
+  font-size: 1.2rem;
+  color: #5a6874;
+}
+
+.help-note strong {
+  color: #D4AF37;
+}
+
+@media (max-width: 600px) {
+  .payment-status-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .payment-status-card h1 {
+    font-size: 1.6rem;
+  }
+}
+</style>
