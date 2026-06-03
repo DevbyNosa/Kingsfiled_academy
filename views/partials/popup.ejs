@@ -1,15 +1,5 @@
- <% if(success === true) { %>
-        <div class="success-message">
-          <span>
-            <%= messageType %>
-            </span>
-        </div>
-          <% } else {%>
-            <div>
-        <div class="error-message">
-          <span>
-            <%= messageType %>
-            </span>
-          </div>
-            </div>
-            <% } %>
+<% if (flash) { %>
+  <div id="toast" class="toast <%= flash.type %>">
+    <%= flash.message %>
+  </div>
+<% } %>

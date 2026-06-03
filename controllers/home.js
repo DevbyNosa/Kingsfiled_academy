@@ -23,12 +23,37 @@ export const contactPage = function (req, res) {
    res.render("homepage/contact.ejs")
 }
 
-export const portalPage = function (req, res) {
-    res.render("homepage/portal.ejs", {
-      success: null,
-      message: null
-    })
-}
+export const portalPage = (req, res) => {
+    // If already logged in as student
+      if (req.session.user && req.session.user.role === 'student') {
+    return res.redirect('/student/dashboard');
+  }
+  
+  // If already logged in as parent
+  if (req.session.user && req.session.user.role === 'parent') {
+    return res.redirect('/parent/dashboard');
+  }
+  
+  // If already logged in as teacher
+  if (req.session.user && req.session.user.role === 'teacher') {
+    return res.redirect('/teacher/dashboard');
+  }
+  
+  // If already logged in as admin
+  if (req.session.user && req.session.user.role === 'admin') {
+    return res.redirect('/admin/dashboard');
+  }
+  
+  const flash = req.session.flash || null;
+
+
+  
+  req.session.flash = null;
+
+  return res.render("homepage/portal.ejs", {
+    flash
+  });
+};
 
 export const applicationPage = function (req, res) {
    res.render("homepage/application.ejs")

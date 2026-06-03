@@ -88,3 +88,11 @@ CREATE TABLE profiles (
     staff_id VARCHAR(50)
     
 );
+
+ALTER TABLE users DROP CONSTRAINT users_email_key;
+
+
+ALTER TABLE users ADD COLUMN IF NOT EXISTS username VARCHAR(100) UNIQUE;
+
+
+ALTER TABLE users ALTER COLUMN email DROP NOT NULL;

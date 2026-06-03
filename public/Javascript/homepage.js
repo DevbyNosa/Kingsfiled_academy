@@ -117,3 +117,17 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
       input.setAttribute('type', type);
     });
   });
+
+  
+ document.addEventListener("DOMContentLoaded", () => {
+  const toast = document.getElementById("toast");
+
+  if (!toast) return;
+
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    toast.style.transform = "translateX(100%)";
+
+    setTimeout(() => toast.remove(), 300);
+  }, 3000);
+});

@@ -2,10 +2,14 @@ import express from 'express';
 import env from 'dotenv/config';
 import session from './database/config/session.js';
 import ejs from 'ejs';
+// Routers
 import homepageRouter from './routes/homepage.js';
 import studentRouter from './routes/student.js';
+import adminRouter from './routes/admin.js';
 import pool from './database/config/db.js';
 import transporter from './database/config/nodemailer.js';
+import { flashMiddleware } from './middleware/flash.js';
+import { generalLimiter } from './middleware/rateLimit.js';
 
 
 
@@ -24,13 +28,15 @@ app.use(express.static('public'));
 // for rendering ejs templates, we need to set the view engine to ejs
 app.set('view engine', 'ejs');
 
-
+app.use(generalLimiter);
 
 
 // For session management, we need to use the session middleware before defining any routes that require session handling.
 app.use(session);
+app.use(flashMiddleware);
 app.use('/', homepageRouter);
-app.use("/", studentRouter)
+app.use("/", studentRouter);
+app.use("/", adminRouter);
 
 
 app.listen(PORT, () => {
