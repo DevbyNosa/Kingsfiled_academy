@@ -9,7 +9,7 @@ export const flashMiddleware = (req, res, next) => {
 
  
   res.on("finish", () => {
-    req.session.flash = null;
+     req.session.flash = null;
   });
 
   next();

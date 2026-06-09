@@ -1,0 +1,12 @@
+/* public/src/css/main.css */
+@import "./navbar.css";
+@import "./homepage.css";
+@import "./responsive.css";
+@import "./about.css";
+@import "./academics.css";
+@import "./admission.css";
+@import "./campus-life.css";
+@import "./contact.css";
+@import "./portal.css";
+@import "./application.css";
+

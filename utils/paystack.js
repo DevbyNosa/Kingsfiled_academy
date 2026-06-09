@@ -1,8 +1,9 @@
 // utils/paystack.js
 import pool from "../database/config/db.js";
-import axios from "axios";
+import paystackAxios from "../database/config/axios.js";
 import { sendApplicationConfirmationEmail } from "../services/emailService.js"; // ADD THIS IMPORT
 
+// utils/paystack.js
 export const paymentVerify = async (req, res) => {
     const { reference } = req.query;
 
@@ -11,18 +12,17 @@ export const paymentVerify = async (req, res) => {
     }
 
     try {
-        const verify = await axios.get(
+        const verify = await paystackAxios.get(
             `https://api.paystack.co/transaction/verify/${reference}`,
             {
                 headers: {
                     Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`
-                },
-                 family: 4
+                }
             }
         );
 
         if (verify.data.data.status === 'success') {
-            // Update payment
+            // Update database
             await pool.query(
                 `UPDATE payments 
                  SET status = 'success', 
@@ -33,7 +33,6 @@ export const paymentVerify = async (req, res) => {
                 [verify.data.data.reference, JSON.stringify(verify.data.data), reference]
             );
 
-            // Get application
             const payment = await pool.query(
                 `SELECT application_ref FROM payments WHERE payment_ref = $1`,
                 [reference]
@@ -44,7 +43,6 @@ export const paymentVerify = async (req, res) => {
                 [payment.rows[0].application_ref]
             );
 
-            // Update application status
             await pool.query(
                 `UPDATE applications SET status = 'payment_confirmed' WHERE application_ref = $1`,
                 [payment.rows[0].application_ref]
@@ -52,8 +50,8 @@ export const paymentVerify = async (req, res) => {
 
             const app = application.rows[0];
 
-          
-            await sendApplicationConfirmationEmail({
+            // ✅ SEND EMAIL IN BACKGROUND (don't await)
+            sendApplicationConfirmationEmail({
                 parentEmail: app.parent_email,
                 parentName: app.father_name || app.mother_name || 'Parent',
                 studentName: app.student_name,
@@ -61,8 +59,9 @@ export const paymentVerify = async (req, res) => {
                 amount: verify.data.data.amount / 100,
                 date: new Date().toLocaleDateString('en-NG'),
                 className: app.applying_for_class
-            });
+            }).catch(err => console.error('Email failed:', err.message));
 
+            // Render success page immediately without waiting for email
             res.render('homepage/payment-success', { 
                 reference: reference, 
                 amount: verify.data.data.amount / 100 

@@ -11,10 +11,11 @@ export const isStudentAuthenticated = (req, res, next) => {
   }
   return res.redirect("/portal");
 }
+
+
 export const studentSessionConfig = async (req, res) => {
   const { admission_no, password } = req.body;
 
-  
   if (!admission_no || !password) {
     req.flash("error", "All fields are required");
     return res.redirect("/portal");
@@ -31,7 +32,6 @@ export const studentSessionConfig = async (req, res) => {
   }
 
   try {
-    
     const result = await pool.query(
       `SELECT u.*, p.admission_no, p.full_name 
        FROM users u 
@@ -46,8 +46,6 @@ export const studentSessionConfig = async (req, res) => {
     }
 
     const user = result.rows[0];
-
-    
     const isMatch = await bcrypt.compare(password, user.password_hash);
 
     if (!isMatch) {
@@ -55,7 +53,6 @@ export const studentSessionConfig = async (req, res) => {
       return res.redirect("/portal");
     }
 
-    
     const fetchStudent = await pool.query(
       `SELECT u.id AS user_id, u.email, u.role,
               p.full_name, p.admission_no, p.class
@@ -67,19 +64,26 @@ export const studentSessionConfig = async (req, res) => {
 
     const student = fetchStudent.rows[0];
 
-    
-    req.session.user = {
-      id: student.user_id,
-      name: student.full_name,
-      role: "student",
-      admission_no: student.admission_no,
-      class: student.class
-    };
-
-    
-    req.flash("success", "Login successful");
-
-    return res.redirect("/student/dashboard");
+    // Set session ONLY on successful login
+    req.session.regenerate((err) => {
+      if (err) {
+        req.flash("error", "Session error");
+        return res.redirect("/portal");
+      }
+      
+      req.session.user = {
+        id: student.user_id,
+        name: student.full_name,
+        role: "student",
+        admission_no: student.admission_no,
+        class: student.class
+      };
+      
+      req.flash("success", "Login successful");
+      req.session.save(() => {
+        res.redirect("/student/dashboard");
+      });
+    });
 
   } catch (error) {
     console.log(error);

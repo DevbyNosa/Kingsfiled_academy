@@ -96,3 +96,17 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS username VARCHAR(100) UNIQUE;
 
 
 ALTER TABLE users ALTER COLUMN email DROP NOT NULL;
+
+
+-- Session Table
+CREATE TABLE "session" (
+  "sid" varchar NOT NULL COLLATE "default",
+  "sess" json NOT NULL,
+  "expire" timestamp(6) NOT NULL
+)
+WITH (OIDS=FALSE);
+
+ALTER TABLE "session" ADD CONSTRAINT "session_pkey" PRIMARY KEY ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
+
+-- Index to make the session expiration cleanups incredibly fast
+CREATE INDEX "IDX_session_expire" ON "session" ("expire");

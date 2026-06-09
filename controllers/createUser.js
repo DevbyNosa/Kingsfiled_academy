@@ -4,7 +4,6 @@ import { flashMiddleware } from "../middleware/flash.js";
 
 
 
- 
 
 export const createNewStudent = async (req, res) => {
    try {
@@ -24,7 +23,6 @@ export const createNewStudent = async (req, res) => {
   const admission_no = `KF/${year}/${String(count.rows[0].count + 1).padStart(3, '0')}`;
 
   // Hash Student's Password
-  
   const passwordHash = await bcrypt.hash(student_password, saltRounds);
 
 

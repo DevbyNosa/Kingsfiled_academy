@@ -1,3 +1,5 @@
+
+
 🟢 Should be CMS-editable (Content that changes often):
 Hero section text (headlines, descriptions)
 
@@ -18,3 +20,166 @@ Contact information (phone, email, address)
 Social media links
 
 Footer text/copyright
+
+
+Core Features (Must Have)
+Feature	What they actually do
+View Results	See their exam scores, term totals, class position
+View Timetable	Check what class they have each day
+View Assignments	See homework given by teachers, due dates
+Submit Assignments	Upload their completed homework
+View Notifications	Read announcements from school/teachers
+View Profile	See their own info (name, class, admission number)
+Secondary Features (Nice to have)
+Feature	What they actually do
+Change Password	Update their login password
+Download Materials	Get past questions, notes, syllabus
+View Attendance	See how many days they were present
+View Fees Status	Check if school fees are paid (view only, not pay)
+Contact Teacher	Send message to their form teacher
+What Students CANNOT do
+Action	Why
+Change their class	Only admin can
+See other students' results	Privacy
+Edit their admission number	System generated
+Delete anything	Read-only mostly
+Pay fees	Parents handle payments
+Enter scores	Only teachers
+Simple Dashboard Layout
+text
+┌─────────────────────────────────────────────────────┐
+│  Welcome, John Adebayo (SSS 1A)               🔔 3 │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────┐│
+│  │ Results  │ │Timetable │ │Assign-   │ │Profile ││
+│  │    📊    │ │   📅     │ │ments 📝  │ │  👤    ││
+│  └──────────┘ └──────────┘ └──────────┘ └────────┘│
+│                                                     │
+│  Recent Notifications:                              │
+│  • New assignment due Friday - Mathematics         │
+│  • Term 1 results published                        │
+│  • School closes at 2pm tomorrow                   │
+│                                                     │
+│  Pending Assignments:                              │
+│  • Mathematics - Due tomorrow                      │
+│  • English - Due in 3 days                         │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+Summary
+Action	Student can do?
+View results	✅
+View timetable	✅
+View assignments	✅
+Submit homework	✅
+Change password	✅
+View profile	✅
+View notifications	✅
+Download notes	✅
+Edit results	❌
+Pay fees	❌ (Parents do)
+Enter scores	❌ (Teachers do)
+Promote class	❌ (Admin does)
+Students are consumers of data, not creators. They mostly READ, sometimes UPDATE (password, submit homework). They never DELETE or CREATE important data. 🔥
+
+Teacher Dashboard - Real Things They Can Do
+Core Features (Must Have)
+Feature	What they actually do
+Enter Scores	Input test and exam scores for their subject(s)
+View Students	See list of students in their class(es)
+Post Assignments	Give homework, set due dates, attach files
+View Submissions	See which students submitted, download their work
+Grade Assignments	Mark submitted homework, give scores
+View Timetable	Check their own teaching schedule
+Secondary Features
+Feature	What they actually do
+Send Announcements	Post notifications to students in their class
+Track Attendance	Mark which students were present
+Download Reports	Export class performance data
+Contact Form Teacher	Message about student issues
+View Class Performance	See average scores, failing students
+Form Teacher ONLY (Extra permissions)
+Feature	What they do
+Compile Results	Combine all subject scores for the class
+Calculate Positions	Generate term totals, averages, rankings
+Publish Results	Make results visible to students
+View All Subjects	See complete class performance
+Add Remarks	Write comments on student reports
+What Teachers CANNOT do
+Action	Why
+See other classes' students	Not their class
+Change student passwords	Only student or admin
+Delete results	Admin only
+Promote students	Admin only
+See salary info	HR only
+Edit other teachers' scores	Only their own subject
+Simple Teacher Dashboard
+text
+┌─────────────────────────────────────────────────────────────┐
+│  Welcome, Mr. Adebayo (Mathematics)                   🔔 4 │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  My Classes:                                                │
+│  ┌─────────────┐  ┌─────────────┐                          │
+│  │ SSS 1A      │  │ SSS 1B      │                          │
+│  │ 40 students │  │ 38 students │                          │
+│  │ Scores: 25/40│  │ Scores: 22/38│                        │
+│  └─────────────┘  └─────────────┘                          │
+│                                                             │
+│  Quick Actions:                                             │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐                   │
+│  │Enter     │ │Post      │ │View      │                   │
+│  │Scores    │ │Assignment│ │Students  │                   │
+│  └──────────┘ └──────────┘ └──────────┘                   │
+│                                                             │
+│  Pending:                                                   │
+│  • 15 assignments to grade                                  │
+│  • 8 students haven't submitted                             │
+│                                                             │
+│  Today's Schedule:                                          │
+│  • 8:00 - 9:30: SSS 1A Mathematics                         │
+│  • 10:00 - 11:30: SSS 1B Mathematics                       │
+│  • 12:00 - 1:00: Break                                     │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+Form Teacher Extra View
+text
+┌─────────────────────────────────────────────────────────────┐
+│  Mrs. Ade (Form Teacher - SSS 1A)                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Subject Teachers Progress:                                 │
+│  ✓ Mathematics (Mr. Ade) - Scores entered                  │
+│  ✓ English (Mrs. Bola) - Scores entered                    │
+│  ⏳ Physics (Mr. John) - Pending (15/40 students)          │
+│  ✓ Chemistry (Mrs. Ngozi) - Scores entered                 │
+│                                                             │
+│  [Compile Results] [Publish Results]                       │
+│                                                             │
+│  Class Summary (when compiled):                            │
+│  ┌───────────────────────────────────────┐                │
+│  │ Student      │ Total │ Avg  │ Position│                │
+│  │ John Ade     │ 485   │ 80.8%│ 1st     │                │
+│  │ Mary Ben     │ 460   │ 76.7%│ 2nd     │                │
+│  │ Peter Oka    │ 445   │ 74.2%│ 3rd     │                │
+│  └───────────────────────────────────────┘                │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+Summary Table
+Action	Subject Teacher	Form Teacher
+Enter scores	✅ (their subject)	❌
+View their students	✅ (their class only)	✅ (their class only)
+Post assignments	✅	✅
+Grade assignments	✅	❌ (not their subject)
+Compile results	❌	✅
+Calculate positions	❌	✅
+Publish results	❌	✅
+See all subjects	❌ (only theirs)	✅
+Add remarks	❌	✅
+View other classes	❌	❌
+Bottom Line
+Role	Main Job
+Subject Teacher	Enter scores for their subject, post assignments, grade homework
+Form Teacher	Compile all subjects, calculate positions, publish results, write remarks
+Teachers CREATE and UPDATE data (scores, assignments). Form Teachers also COMPILE and PUBLISH. 🔥
+

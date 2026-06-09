@@ -1,0 +1,340 @@
+<%- include("../partials/student_nav.ejs") %>
+
+   <div class="dashboard-container">
+  
+      <div class="dashboard-welcome">
+        <h3>Dashboard</h3>
+        <p>Welcome back,  John Doe</p>
+      </div>
+    
+
+     
+   <div class="stats-grid">
+  <!-- Current Term -->
+  <div class="stat-card">
+    <div class="stat-card-row">
+      <div class="stat-icon green">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="4" width="18" height="16" rx="1" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 2V6M16 2V6M3 10H21" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>2nd Term</h4>
+        <p>January - April 2026</p>
+      </div>
+    </div>
+    <div class="stat-footer">
+      <span class="stat-badge">In Progress</span>
+    </div>
+  </div>
+
+  <!-- Subjects -->
+  <div class="stat-card">
+    <div class="stat-card-row">
+      <div class="stat-icon purple">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>9 Subjects</h4>
+        <p>Mathematics, English, Physics...</p>
+      </div>
+    </div>
+    <div class="stat-footer">
+      <a href="#" class="stat-link">View all →</a>
+    </div>
+  </div>
+
+  <!-- Class -->
+  <div class="stat-card">
+    <div class="stat-card-row">
+      <div class="stat-icon orange">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 12V8" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>SSS 2</h4>
+        <p>Science Class</p>
+      </div>
+    </div>
+    <div class="stat-footer">
+      <span class="stat-badge">Form Teacher: Mrs. Ade</span>
+    </div>
+  </div>
+
+  <!-- Class Position -->
+  <div class="stat-card">
+    <div class="stat-card-row">
+      <div class="stat-icon blue">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 12V8" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>4th</h4>
+        <p>out of 42 students</p>
+      </div>
+    </div>
+    <div class="stat-footer">
+      <a href="/student/results" class="stat-link">View Result →</a>
+    </div>
+  </div>
+</div>
+
+
+<section class="dashboard-status">
+  <div class="dashboard-overflow">
+   
+
+   <div class="result-section">
+
+     <span class="result-nav">
+    <h4>Recent Result</h4>
+    <p>2025/2026</p>
+    </span>
+  <!-- Header Row -->
+  <div class="result-header">
+    <span>Subject</span>
+    <span>First Test</span>
+    <span>Second Test</span>
+    <span>Exam</span>
+    <span>Total</span>
+    <span>Grade</span>
+    <span>Performance</span>
+  </div>
+
+  <!-- Row 1 -->
+  <div class="result-row">
+    <span>Mathematics</span>
+    <span>13/15</span>
+    <span>15/15</span>
+    <span>62/70</span>
+    <span>89</span>
+    <span class="grade grade-a">A</span>
+    <span>Excellent</span>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="result-row">
+    <span>English</span>
+    <span>12/15</span>
+    <span>14/15</span>
+    <span>58/70</span>
+    <span>84</span>
+    <span class="grade grade-a">A</span>
+    <span>Excellent
+    </span>
+  </div>
+
+  <div class="result-row">
+    <span>English</span>
+    <span>10/15</span>
+    <span>13/15</span>
+    <span>44/70</span>
+    <span>67</span>
+    <span class="grade grade-b">B</span>
+    <span>Very Good</span>
+  </div>
+</div>
+
+<div class="school-timetable-section">
+  <div class="timetable-header">
+    <div class="header-title-area">
+      <h2 class="timetable-title">Class Timetable</h2>
+      <p class="timetable-subtitle">Senior Secondary • Grade 11-A</p>
+    </div>
+    <div class="timetable-meta">
+      <span class="room-badge">Home Room: Lab 3B</span>
+    </div>
+  </div>
+
+  <div class="timetable-grid-container">
+    <div class="timetable-grid">
+      
+      <div class="grid-cell track-time">Time</div>
+      <div class="grid-cell day-header">Mon</div>
+      <div class="grid-cell day-header">Tue</div>
+      <div class="grid-cell day-header">Wed</div>
+      <div class="grid-cell day-header">Thu</div>
+      <div class="grid-cell day-header">Fri</div>
+
+      <div class="grid-cell time-slot">
+        <span class="period-num">Period 1</span>
+        <span class="time-range">09:00 - 10:00</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Mathematics</span>
+        <span class="teacher-name">Mr. Davis</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">English Lit</span>
+        <span class="teacher-name">Mrs. Smith</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Mathematics</span>
+        <span class="teacher-name">Mr. Davis</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Chemistry</span>
+        <span class="teacher-name">Dr. Jones</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">History</span>
+        <span class="teacher-name">Mr. Albie</span>
+      </div>
+
+      <div class="grid-cell time-slot">
+        <span class="period-num">Period 2</span>
+        <span class="time-range">10:00 - 11:00</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Physics</span>
+        <span class="teacher-name">Prof. Kraft</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Geometry</span>
+        <span class="teacher-name">Mr. Davis</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">English Lit</span>
+        <span class="teacher-name">Mrs. Smith</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Geography</span>
+        <span class="teacher-name">Ms. Vance</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Biology</span>
+        <span class="teacher-name">Mrs. Green</span>
+      </div>
+
+      <div class="grid-cell time-slot">
+        <span class="time-range">11:00 - 11:30</span>
+      </div>
+      <div class="grid-cell break-slot" style="grid-column: span 5;">
+        <span class="break-text">Morning Recess</span>
+      </div>
+
+      <div class="grid-cell time-slot">
+        <span class="period-num">Period 3</span>
+        <span class="time-range">11:30 - 12:30</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Fine Arts</span>
+        <span class="teacher-name">Ms. Gable</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Chemistry</span>
+        <span class="teacher-name">Dr. Jones</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">History</span>
+        <span class="teacher-name">Mr. Albie</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Mathematics</span>
+        <span class="teacher-name">Mr. Davis</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Phys. Ed (PE)</span>
+        <span class="teacher-name">Coach Miller</span>
+      </div>
+
+      <div class="grid-cell time-slot">
+        <span class="time-range">12:30 - 13:00</span>
+      </div>
+      <div class="grid-cell break-slot" style="grid-column: span 5;">
+        <span class="break-text">Lunch Interval</span>
+      </div>
+
+      <div class="grid-cell time-slot">
+        <span class="period-num">Period 4</span>
+        <span class="time-range">13:00 - 14:00</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Grammar</span>
+        <span class="teacher-name">Mrs. Smith</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Civic Education</span>
+        <span class="teacher-name">Coach Miller</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Biology Lab</span>
+        <span class="teacher-name">Mrs. Green</span>
+      </div>
+      <div class="grid-cell subject-card">
+        <span class="subject-name">Music</span>
+        <span class="teacher-name">Mr. Bach</span>
+      </div>
+      <div class="grid-cell subject-card current-period">
+        <span class="subject-name">Physics Lab</span>
+        <span class="teacher-name">Prof. Kraft</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </div>
+  <div>
+    <div class="tuiton-section" >
+    <div class="tution-header"><svg class="tuition-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.5 9H14C12.3431 9 11 10.3431 11 12C11 13.6569 12.3431 15 14 15H21.5M14 12V12.01M4.61111 5H19.3889C20.5548 5 21.5 6.04467 21.5 7.33333V16.6667C21.5 17.9553 20.5548 19 19.3889 19H4.61111C3.44518 19 2.5 17.9553 2.5 16.6667V7.33333C2.5 6.04467 3.44518 5 4.61111 5Z" stroke="#f7f7f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg><span></span> <h5 class="tuition-status">Tuition Status</h45></div>
+
+    <div class="price-child">
+   <P>Total Price</P>
+   <span class="tuition-price-amount">
+<svg class="error-svg" fill="#000000" viewBox="0 0 24 24" id="naira" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" class="icon flat-line"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><polyline id="primary" points="7 21 7 3 17 21 17 3" style="fill: none; stroke: #f7f7f7; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></polyline><path id="primary-2" data-name="primary" d="M4,10H20M4,14H20" style="fill: none; stroke: #f7f7f7; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
+
+<h4 class="tuition-amount">85,000</h4>
+   </span>
+   </div>
+
+   <div class="check-payment">
+    <span class="validation-tuition">
+      <svg class="paid-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="12" r="10" stroke="#f7f7f7" stroke-width="1.5"></circle> <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="#f7f7f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      <p>Paid</p>
+    </span>
+   </div>
+    </div>
+
+
+
+    <div class="annoouncement-dashboard">
+      <span class="announcement-dashboard-header">
+        <h5>Announcements</h5>
+        <svg class="announcement-svg" fill="#000000" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1587.162 31.278c11.52-23.491 37.27-35.689 63.473-29.816 25.525 6.099 43.483 28.8 43.483 55.002V570.46C1822.87 596.662 1920 710.733 1920 847.053c0 136.32-97.13 250.503-225.882 276.705v513.883c0 26.202-17.958 49.016-43.483 55.002a57.279 57.279 0 0 1-12.988 1.468c-21.12 0-40.772-11.745-50.485-31.171C1379.238 1247.203 964.18 1242.347 960 1242.347H564.706v564.706h87.755c-11.859-90.127-17.506-247.003 63.473-350.683 52.405-67.087 129.657-101.082 229.948-101.082v112.941c-64.49 0-110.57 18.861-140.837 57.487-68.781 87.868-45.064 263.83-30.269 324.254 4.18 16.828.34 34.673-10.277 48.34-10.73 13.665-27.219 21.684-44.499 21.684H508.235c-31.171 0-56.47-25.186-56.47-56.47v-621.177h-56.47c-155.747 0-282.354-126.607-282.354-282.353v-56.47h-56.47C25.299 903.523 0 878.336 0 847.052c0-31.172 25.299-56.471 56.47-56.471h56.471v-56.47c0-155.634 126.607-282.354 282.353-282.354h564.593c16.941-.112 420.48-7.002 627.275-420.48Zm-5.986 218.429c-194.71 242.371-452.216 298.164-564.705 311.04v572.724c112.489 12.876 369.995 68.556 564.705 311.04ZM903.53 564.7H395.294c-93.402 0-169.412 76.01-169.412 169.411v225.883c0 93.402 76.01 169.412 169.412 169.412H903.53V564.7Zm790.589 123.444v317.93c65.618-23.379 112.94-85.497 112.94-159.021 0-73.525-47.322-135.53-112.94-158.909Z" fill-rule="evenodd"></path> </g></svg>
+      </span>
+
+      <span class="announcement-dashboard-body">
+       
+  
+        <span class="announcement-icon">
+          <svg class="notification-bar-small" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.00195 17H5.60636C4.34793 17 3.71872 17 3.58633 16.9023C3.4376 16.7925 3.40126 16.7277 3.38515 16.5436C3.37082 16.3797 3.75646 15.7486 4.52776 14.4866C5.32411 13.1835 6.00031 11.2862 6.00031 8.6C6.00031 7.11479 6.63245 5.69041 7.75766 4.6402C8.88288 3.59 10.409 3 12.0003 3C13.5916 3 15.1177 3.59 16.2429 4.6402C17.3682 5.69041 18.0003 7.11479 18.0003 8.6C18.0003 11.2862 18.6765 13.1835 19.4729 14.4866C20.2441 15.7486 20.6298 16.3797 20.6155 16.5436C20.5994 16.7277 20.563 16.7925 20.4143 16.9023C20.2819 17 19.6527 17 18.3943 17H15.0003M9.00195 17L9.00031 18C9.00031 19.6569 10.3435 21 12.0003 21C13.6572 21 15.0003 19.6569 15.0003 18V17M9.00195 17H15.0003" stroke="#4f4f4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </span>
+
+        
+        <span class="announcemt-header-text">
+          Scholarship Application Deadline Extended...
+        </span>
+               
+
+       <span class="flex-announcement">
+           <span>June 4</span>
+           <span>Academic</span>
+        </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
