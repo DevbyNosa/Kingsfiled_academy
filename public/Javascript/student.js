@@ -1,6 +1,7 @@
 const dashboardStudentMenu = document.querySelector(".student-harmburger");
-const dashboardSidebar = document.querySelector(".sidebar-list")
+const dashboardSidebar = document.querySelector(".sidebar")
 
 dashboardStudentMenu.addEventListener("click", () => {
- dashboardSidebar.classList.add("active")
+
+ dashboardSidebar.classList.toggle("active");
 })

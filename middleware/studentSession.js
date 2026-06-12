@@ -80,8 +80,9 @@ export const studentSessionConfig = async (req, res) => {
       };
       
       req.flash("success", "Login successful");
+      
       req.session.save(() => {
-        res.redirect("/student/dashboard");
+       return res.redirect("/student/dashboard");
       });
     });
 

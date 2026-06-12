@@ -6,6 +6,7 @@ import ejs from 'ejs';
 import homepageRouter from './routes/homepage.js';
 import studentRouter from './routes/student.js';
 import adminRouter from './routes/admin.js';
+import teacherRouter from './routes/teacher.js'
 import pool from './database/config/db.js';
 import transporter from './database/config/nodemailer.js';
 import { flashMiddleware } from './middleware/flash.js';
@@ -28,6 +29,7 @@ app.use(express.static('public'));
 
 // for rendering ejs templates, we need to set the view engine to ejs
 app.set('view engine', 'ejs');
+app.set('trust proxy', 1)
 
 app.use(generalLimiter);
 
@@ -36,8 +38,9 @@ app.use(generalLimiter);
 app.use(session);
 app.use(flashMiddleware);
 app.use('/', homepageRouter);
-app.use("/", studentRouter);
+app.use("/student", studentRouter);
 app.use("/", adminRouter);
+app.use("/teacher", teacherRouter);
 
 
 app.listen(PORT, () => {

@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch . --ext js,ejs,css,json index.js"
-  },
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "css:build": "postcss public/src/css/main.css -o public/dist/css/main.css",
+  "css:watch": "postcss public/src/css/main.css -o public/dist/css/main.css --watch",
+  "dashboard:watch": "postcss public/src/css/student/dashboard-main.css -o public/dist/css/student/dashboard-main.css --watch",
+  "dev": "concurrently \"nodemon --watch . --ext js,ejs,css,json index.js\" \"npm run css:watch\" \"npm run dashboard:watch\""
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

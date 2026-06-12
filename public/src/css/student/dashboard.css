@@ -52,8 +52,8 @@ main {
 
 .dashboard-container {
   flex: 1;
-  padding: 2rem;
-  overflow-y: auto;
+  width: 100%;
+  margin: 1rem auto;
 }
 
 .dashboard-wrapper {
@@ -65,8 +65,8 @@ main {
 .dashboard-main {
   flex: 1;
   padding: 2rem;
-  overflow-y: auto;
   background: var(--surface-color);
+  width: 100%;
 }
 
 
@@ -724,3 +724,7 @@ main {
 .color-geography { border-left-color: #1abc9c; }
 .color-arts { border-left-color: #e84393; }
 .color-pe { border-left-color: var(--warning); }
+
+.student-footer {
+ text-align: center;
+}

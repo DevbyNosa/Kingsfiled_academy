@@ -1,0 +1,132 @@
+<%- include("../partials/student_nav.ejs") %>
+
+
+<div class="dashboard-main">
+  <div class="dashboard-container">
+    
+    <!-- Page Header -->
+    <div class="timetable-header">
+      <div>
+        <h2>📅 Class Timetable</h2>
+        <p>Your weekly class schedule</p>
+      </div>
+      <div class="term-filter">
+        <label>Select Class:</label>
+        <select id="classSelect" class="term-dropdown">
+          <option value="SSS 1A">SSS 1A</option>
+          <option value="SSS 1B">SSS 1B</option>
+          <option value="SSS 2A" selected>SSS 2A</option>
+          <option value="SSS 2B">SSS 2B</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Timetable Summary -->
+    <div class="timetable-summary">
+      <div class="summary-card">
+        <span>Current Week</span>
+        <strong>Week 8</strong>
+      </div>
+      <div class="summary-card">
+        <span>Total Periods</span>
+        <strong>35 per week</strong>
+      </div>
+      <div class="summary-card">
+        <span>Class Teacher</span>
+        <strong>Mrs. Adebayo</strong>
+      </div>
+    </div>
+
+    <!-- Weekly Timetable Grid -->
+    <div class="dashboard-overflow">
+      <div class="timetable-grid">
+        
+        <!-- Header Row -->
+        <div class="timetable-row header-row">
+          <div class="timetable-cell time-col">Time</div>
+          <div class="timetable-cell">Monday</div>
+          <div class="timetable-cell">Tuesday</div>
+          <div class="timetable-cell">Wednesday</div>
+          <div class="timetable-cell">Thursday</div>
+          <div class="timetable-cell">Friday</div>
+        </div>
+
+        <!-- Period 1: 8:00 - 9:00 -->
+        <div class="timetable-row">
+          <div class="timetable-cell time-col">8:00 - 9:00</div>
+          <div class="timetable-cell">Mathematics<br><span class="teacher">Mr. Ade</span></div>
+          <div class="timetable-cell">English<br><span class="teacher">Mrs. Bola</span></div>
+          <div class="timetable-cell">Physics<br><span class="teacher">Mr. John</span></div>
+          <div class="timetable-cell">Biology<br><span class="teacher">Dr. Emma</span></div>
+          <div class="timetable-cell">Mathematics<br><span class="teacher">Mr. Ade</span></div>
+        </div>
+
+        <!-- Period 2: 9:00 - 10:00 -->
+        <div class="timetable-row">
+          <div class="timetable-cell time-col">9:00 - 10:00</div>
+          <div class="timetable-cell">English<br><span class="teacher">Mrs. Bola</span></div>
+          <div class="timetable-cell">Mathematics<br><span class="teacher">Mr. Ade</span></div>
+          <div class="timetable-cell">Chemistry<br><span class="teacher">Mrs. Ngozi</span></div>
+          <div class="timetable-cell">Physics<br><span class="teacher">Mr. John</span></div>
+          <div class="timetable-cell">English<br><span class="teacher">Mrs. Bola</span></div>
+        </div>
+
+        <!-- Break Period -->
+        <div class="timetable-row break-row">
+          <div class="timetable-cell time-col">10:00 - 10:30</div>
+          <div class="timetable-cell break-cell" colspan="5">BREAK</div>
+        </div>
+
+        <!-- Period 3: 10:30 - 11:30 -->
+        <div class="timetable-row">
+          <div class="timetable-cell time-col">10:30 - 11:30</div>
+          <div class="timetable-cell">Physics<br><span class="teacher">Mr. John</span></div>
+          <div class="timetable-cell">Chemistry<br><span class="teacher">Mrs. Ngozi</span></div>
+          <div class="timetable-cell">Mathematics<br><span class="teacher">Mr. Ade</span></div>
+          <div class="timetable-cell">Chemistry<br><span class="teacher">Mrs. Ngozi</span></div>
+          <div class="timetable-cell">Physics<br><span class="teacher">Mr. John</span></div>
+        </div>
+
+        <!-- Period 4: 11:30 - 12:30 -->
+        <div class="timetable-row">
+          <div class="timetable-cell time-col">11:30 - 12:30</div>
+          <div class="timetable-cell">Chemistry<br><span class="teacher">Mrs. Ngozi</span></div>
+          <div class="timetable-cell">Physics<br><span class="teacher">Mr. John</span></div>
+          <div class="timetable-cell">English<br><span class="teacher">Mrs. Bola</span></div>
+          <div class="timetable-cell">Mathematics<br><span class="teacher">Mr. Ade</span></div>
+          <div class="timetable-cell">Further Maths<br><span class="teacher">Mr. Ade</span></div>
+        </div>
+
+        <!-- Lunch Period -->
+        <div class="timetable-row lunch-row">
+          <div class="timetable-cell time-col">12:30 - 1:30</div>
+          <div class="timetable-cell lunch-cell" colspan="5">LUNCH BREAK</div>
+        </div>
+
+        <!-- Period 5: 1:30 - 2:30 -->
+        <div class="timetable-row">
+          <div class="timetable-cell time-col">1:30 - 2:30</div>
+          <div class="timetable-cell">Biology<br><span class="teacher">Dr. Emma</span></div>
+          <div class="timetable-cell">Further Maths<br><span class="teacher">Mr. Ade</span></div>
+          <div class="timetable-cell">Biology<br><span class="teacher">Dr. Emma</span></div>
+          <div class="timetable-cell">English<br><span class="teacher">Mrs. Bola</span></div>
+          <div class="timetable-cell">Chemistry<br><span class="teacher">Mrs. Ngozi</span></div>
+        </div>
+
+        <!-- Period 6: 2:30 - 3:00 -->
+        <div class="timetable-row">
+          <div class="timetable-cell time-col">2:30 - 3:00</div>
+          <div class="timetable-cell">Study Hall<br><span class="teacher">Mr. Ade</span></div>
+          <div class="timetable-cell">Civic Ed<br><span class="teacher">Mrs. Funke</span></div>
+          <div class="timetable-cell">Sports<br><span class="teacher">Coach</span></div>
+          <div class="timetable-cell">ICT<br><span class="teacher">Mr. Peter</span></div>
+          <div class="timetable-cell">Assembly<br><span class="teacher">Principal</span></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%- include("../partials/student_footer.ejs") %>

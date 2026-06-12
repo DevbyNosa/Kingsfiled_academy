@@ -35,7 +35,30 @@
 
   .sidebar.active {
     display: block;
+    z-index: 999;
   }
+
+  .student-harmburger {
+    display: block;
+  }
+
+  .dashboard-status {
+    grid-template-columns: 1fr;
+  }
+
+  .result-header-cta {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--text-base);
+  }
+
+  .result-card-stats {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  
 }
 
 @media(max-width: 768px) {
@@ -455,6 +478,13 @@
   .portal-btn {
     width: 100%;
   }
+  
+
+  .school_name, .school_abbr, .student_names {
+  display: none;
+  }
+
+
 
 }
 

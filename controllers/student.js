@@ -8,3 +8,7 @@ export const studentDashboardPage = (req, res) => {
 export const studentResultPage = async (req, res) => {
    res.render("student/results.ejs");
 }
+
+export const timeTablePage = async (req, res) => {
+  res.render("student/timetable");
+}

@@ -1,2 +1,4 @@
 @import './dashboard.css';
 @import './results.css';
+@import './timetable.css';
+@import '../responsive.css'
